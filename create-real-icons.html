@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head><title>Create Real Icons</title></head>
+<body>
+<canvas id="icon" width="1024" height="1024"></canvas>
+<canvas id="adaptive" width="1024" height="1024"></canvas>
+<canvas id="splash" width="1284" height="2778"></canvas>
+
+<script>
+// Create icon
+const iconCanvas = document.getElementById('icon');
+const iconCtx = iconCanvas.getContext('2d');
+
+// Background
+const gradient = iconCtx.createLinearGradient(0, 0, 1024, 1024);
+gradient.addColorStop(0, '#2d5a5a');
+gradient.addColorStop(1, '#1a3d3d');
+iconCtx.fillStyle = gradient;
+iconCtx.fillRect(0, 0, 1024, 1024);
+
+// Brain
+iconCtx.fillStyle = '#FFB6C1';
+iconCtx.beginPath();
+iconCtx.ellipse(384, 512, 140, 180, 0, 0, Math.PI * 2);
+iconCtx.fill();
+iconCtx.beginPath();
+iconCtx.ellipse(640, 512, 140, 180, 0, 0, Math.PI * 2);
+iconCtx.fill();
+
+// Download
+setTimeout(() => {
+    const link = document.createElement('a');
+    link.download = 'icon.png';
+    link.href = iconCanvas.toDataURL();
+    link.click();
+    
+    link.download = 'adaptive-icon.png';
+    link.href = iconCanvas.toDataURL();
+    link.click();
+    
+    // Splash
+    const splashCanvas = document.getElementById('splash');
+    const splashCtx = splashCanvas.getContext('2d');
+    const splashGrad = splashCtx.createLinearGradient(0, 0, 0, 2778);
+    splashGrad.addColorStop(0, '#2d5a5a');
+    splashGrad.addColorStop(1, '#1a3d3d');
+    splashCtx.fillStyle = splashGrad;
+    splashCtx.fillRect(0, 0, 1284, 2778);
+    
+    link.download = 'splash.png';
+    link.href = splashCanvas.toDataURL();
+    link.click();
+}, 1000);
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "name": "brain-protection-app",
+  "version": "1.0.0",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "build": "expo build:web",
+    "export": "expo export:web"
+  },
+  "dependencies": {
+    "expo": "~49.0.15",
+    "expo-status-bar": "~1.6.0",
+    "react": "18.2.0",
+    "react-native": "0.72.6",
+    "expo-linear-gradient": "~12.3.0",
+    "expo-haptics": "~12.4.0",
+    "react-native-web": "~0.19.6",
+    "react-dom": "18.2.0",
+    "@expo/webpack-config": "^19.0.0",
+    "expo-dev-client": "~2.4.13"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0"
+  },
+  "private": true
+}

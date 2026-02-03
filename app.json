@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "حماية الدماغ",
+    "slug": "brain-protection-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.nourjudy.brainprotection"
+    },
+    "android": {
+      "package": "com.nourjudy.brainprotection",
+      "versionCode": 1,
+      "permissions": []
+    },
+    "web": {},
+    "extra": {
+      "eas": {
+        "projectId": "your-project-id-here"
+      }
+    }
+  }
+}
