@@ -1,13 +1,9 @@
 {
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "web-build"
-      }
+  "functions": {
+    "index.html": {
+      "runtime": "@vercel/static"
     }
-  ],
+  },
   "routes": [
     {
       "src": "/(.*)",
